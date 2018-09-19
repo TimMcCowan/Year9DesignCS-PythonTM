@@ -15,5 +15,20 @@ y2 = int(y2)
 
 #Process
 rise = x2 - x1
+run = y2 - y1
+
+fSlope = rise/run
+
+# Three types to consider
+# Strings - store collections of characters
+# Result = str(<value>)
+# Integers - store integer values
+# result int(<value>)
+# Floats - store real numbers
+# Result = float(<value>)
 
 #output
+print("Your slope is m ="+str(rise)+"/"+str(run))
+print("Your slope as a decimal is "+str(fSlope))
+print(rise)
+print(run)
