@@ -1,6 +1,5 @@
 import tkinter as tk
 import math
-bg(200,200,100)
 def submit():
 
 	print("submit pressed")
