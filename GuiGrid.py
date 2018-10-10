@@ -17,6 +17,4 @@ ent.grid(row = 0, column = 0)
 btn = tk.Button(root, text = "press me")
 btn.grid(row = 0, column = 1)
 
-btn1 = tk.RadioButton(root)
-Btn1.grid(row = 1, column = 0)
 root.mainloop()
