@@ -7,11 +7,33 @@
 
 import tkinter as tk
 import math
+import os
 
 def submit():
-	d = str(e.get())
+	d1 = e1.get()
+	d1 = int(d1)
+
+	d2 = e2.get()
+	d2 = int(d2)
+
+	d3 = e3.get()
+	d3 = int(d3)
+
+	d4 = e4.get()
+	d4 = int(d4)
+
+	d5 = e5.get()
+	d5 = int(d5)
+
+	d6 = e6.get()
+	d6 = int(d6)
+
+	d7 = e7.get()
+	d7 = int(d7)
+
+	ttl = d1+d2+d3+d4+d5+d6+d7
 	u = v.get()
-	print("You swam " +d +" "+u)
+	print("You swam " +ttl+" "+u)
 
 
 
@@ -27,12 +49,62 @@ MODES = [
 v = tk.StringVar()
 v.set("A")
 
-t = tk.Label(root,text = "Enter distance swam")
-t.pack()
+#label 1
+t1 = tk.Label(root,text = "Enter distance swam for workout 1")
+t1.pack()
 
-#text box
-e = tk.Entry(root)
-e.pack()
+#text box 1 
+e1 = tk.Entry(root)
+e1.pack()
+
+# label 2
+t2 = tk.Label(root,text = "Enter distance swam for workout 2")
+t2.pack()
+
+#text box 2 
+e2 = tk.Entry(root)
+e2.pack()
+
+# label 3
+t3 = tk.Label(root,text = "Enter distance swam for workout 3")
+t3.pack()
+
+#text box 3
+e3 = tk.Entry(root)
+e3.pack()
+
+# label 4
+t4 = tk.Label(root,text = "Enter distance swam for workout 4")
+t4.pack()
+
+#text box 4
+e4 = tk.Entry(root)
+e4.pack()
+
+# label 5
+t5 = tk.Label(root,text = "Enter distance swam for workout 5")
+t5.pack()
+
+#text box 3
+e5 = tk.Entry(root)
+e5.pack()
+
+# label 6
+t6 = tk.Label(root,text = "Enter distance swam for workout 6")
+t6.pack()
+
+#text box 6
+e6 = tk.Entry(root)
+e6.pack()
+
+# label 7
+t7 = tk.Label(root,text = "Enter distance swam for workout 7")
+t7.pack()
+
+#text box 3
+e7 = tk.Entry(root)
+e7.pack()
+
 
 
 #choose unit
