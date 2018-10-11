@@ -10,13 +10,13 @@ import math
 
 def submit():
 	d1 = e1.get()
-	d1 = int(d1)
+	
 
 	d2 = e2.get()
-	d2 = int(d2)
+	
 
 	d3 = e3.get()
-	d3 = int(d3)
+	
 
 	d4 = e4.get()
 	d4 = int(d4)
