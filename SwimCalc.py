@@ -9,30 +9,24 @@ import tkinter as tk
 import math
 
 def submit():
-	d1 = e1.get()
-	d1 = int(d1)
+	d1 = int(e1.get())
 
-	d2 = e2.get()
-	d2 = int(d2)
+	d2 = int(e2.get())
 
-	d3 = e3.get()
-	d3 = int(d3)
+	d3 = int(e3.get())
 
-	d4 = e4.get()
-	d4 = int(d4)
+	d4 = int(e4.get())
 
-	d5 = e5.get()
-	d5 = int(d5)
+	d5 = int(e5.get())
 
-	d6 = e6.get()
-	d6 = int(d6)
+	d6 = int(e6.get())
 
-	d7 = e7.get()
-	d7 = int(d7)
+	d7 = int(e7.get())
 
-	ttl = d1+d2+d3+d4+d5+d6+d7
-	u = v.get()
-	print("You swam " +ttl+" "+u)
+	ttl =d1 +d2 + d3+d4+d5+d6+d7
+
+	u = str(v.get())
+	print("You swam " +str(ttl)+" " +str(u)+" this week")
 
 
 
