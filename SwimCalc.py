@@ -1,5 +1,3 @@
-
-
 import tkinter as tk
 import math
 
@@ -31,7 +29,6 @@ def submit():
 
 	ttl = round(ttl,2)
 	print("You swam " +str(ttl)+" " +str(u)+" this week")
-
 
 
 

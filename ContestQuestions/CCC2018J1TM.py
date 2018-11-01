@@ -1,1 +1,6 @@
-print("CCC2018J1")
+import tkinter as tk
+
+a = input.get()
+a = int(a)
+
+a = 
