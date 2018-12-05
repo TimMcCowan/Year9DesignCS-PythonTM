@@ -1,16 +1,21 @@
 import tkinter as tk
 import math
 
-def startup():
 
+
+root = tk.Tk()
+
+tlist = []
+e1 = [tk.Entry(root)]
+
+def startup():
 	ctr1 = wkt.get()
 	ctr1 = int(ctr1) #cast that to an int
 	
 	#This is a list that can hold many label
-	tlist = [] 
+	
 	
 	#Create a list of entry box
-	
 	for i in range(0,ctr1,1):
  
  		#creating a lable object and we adding it to the list
@@ -21,10 +26,15 @@ def startup():
 		#When you create an entry box append it to the list. 
 		e1 = tk.Entry(root)
 		e1.pack()
+
+
+
 	for r in range(0,len(MODES),1):
 		rbtn = tk.Radiobutton(root,text = MODES[r][0],variable = v, value=MODES[r][1],bg = 'gray')
 		rbtn.pack()
 	#submit button
+	
+
 	btn = tk.Button(root,text = "Submit", command = submit,bg = 'gray',borderwidth = 0.001,)
 	btn.pack()
 
@@ -33,9 +43,7 @@ def startup():
 
 def submit():
 
-
-	
-	
+		
 	d1 = int(e1.get())
 
 	d2 = int(e1.get())
@@ -65,9 +73,6 @@ def submit():
 	print("You swam " +str(ttl)+" " +str(u)+" this week")
 
 
-
-
-root = tk.Tk()
 
 
 root.configure(bg='blue')
