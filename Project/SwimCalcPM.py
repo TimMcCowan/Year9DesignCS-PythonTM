@@ -4,7 +4,7 @@ import math
 
 #user selected
 def user(*args):
-	print("user selected:"+var.get())
+	print("user selected: "+var.get())
 
 
 #average
@@ -18,7 +18,6 @@ def submit(*args):
 	print(val)
 	list1 = val.split("\n") #Turns it into a list, separating on the \n a new line
 
-	#print(list1)
 	
 	a = 0
 	b =0
@@ -36,7 +35,11 @@ def submit(*args):
 	if u == "Yards" and a>=1760:
 		u = "Miles"
 		a = a/1760
+
+	
 	b = a/(len(list1)-1)
+	#average stuff
+	
 	print("user selected: " +var.get())
 	print("your average distance per workout was: {0} " .format(b) +" "+ u )
 	outpt.delete("1.0",tk.END)
@@ -55,9 +58,9 @@ def submit(*args):
 	
 	#Step 4: Update everything
 
-	for i in range(0, len(list1),1):
-		userList.append(var.get())
-		unitsList.append(list1[i])
+	#for i in range(0, len(list1),1):
+		#userList.append(var.get())
+		#unitsList.append(list1[i])
 #font
 f = 1
 
@@ -92,12 +95,6 @@ def fontdown(*args):
 
 
 
-#Variables that store information
-#User
-userList = []
-unitsList = []
-distanceList = [] 
-
 root = tk.Tk()
 
 MODES = [
@@ -106,26 +103,19 @@ MODES = [
 ]
 
 
-DDM = ["Tim","John","Jack"]
+DDM = ["Tim","John","Jack","Kevin"]
 
 var = tk.StringVar(root)
 var.set(DDM[0])
 var.trace("w",user)
 
 
-# workout text
-#wrkt = tk.Label(root, text= "Type in number of workouts")
-#wrkt.grid(column = 0, row  = 0)
-
-#wrktT = tk.Text(root, bg = 'grey', height = 1, width = 3)
-#wrktT.grid(column = 0, row = 1)
-
 
 #Dropdown menu
 user = tk.Label(root,text = "User")
 user.grid(column = 1, row = 0,columnspan = 2)
 
-userT = tk.OptionMenu(root,var,DDM[0],DDM[1],DDM[2])
+userT = tk.OptionMenu(root,var,DDM[0],DDM[1],DDM[2],DDM[3])
 userT.grid(column = 1, row = 1, columnspan = 2)
 
 
@@ -144,9 +134,7 @@ v.set(MODES[0][0])
 #RADIO BUTTONS
 for r in range(0,len(MODES),1):
 		rbtn = tk.Radiobutton(root,text = MODES[r][0],variable = v, value=MODES[r][1])
-		rbtn.grid(column = 2, row = r+4)
-		#rbtn2 = tk.Radiobutton(root,variable = v, value=MODES[r][1], text = "Meters")
-		#rbtn2.grid(column = 2,row  = 5)
+		rbtn.grid(column = 0, row = r+4)
 
 smbtn = tk.Button(root, text = "Submit!", command = submit)
 smbtn.grid(row = 4, column = 1,rowspan = 2)
@@ -164,7 +152,7 @@ fontsize3 = tk.Label(root, text=str(f))
 fontsize2 = tk.Button(root, command =lambda: fontup(),background = "light grey", text = "+")
 
 
-fontsizeL.grid(column = 1, row = 7)
+fontsizeL.grid(column = 0, row = 7)
 fontsize1.grid(column = 0, row  =8)
 fontsize3.grid(column = 1,row = 8)
 fontsize2.grid(column = 2, row =8) 
